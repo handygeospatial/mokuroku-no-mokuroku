@@ -18298,11 +18298,17 @@ module.exports = require('./lib/React');
 },{"./lib/React":30}],149:[function(require,module,exports){
 var React = require('react');
 var Tanzaku = React.createClass({displayName: "Tanzaku",
+  getInitalState: function() {
+    return {data: []}
+  },
+  componentDidMount: function() {
+    // xhr
+  },
   render: function() {
-    var url = 'http://cyberjapandata.gsi.go.jp/xyz/' +
+    this.props.url = 'http://cyberjapandata.gsi.go.jp/xyz/' +
       this.props.name + '/mokuroku.csv.gz';
     return (
-      React.createElement("tr", null, React.createElement("td", null, this.props.name), React.createElement("td", null, url))
+      React.createElement("tr", null, React.createElement("td", null, this.props.name), React.createElement("td", null, this.props.url))
     );
   }
 });
@@ -18311,9 +18317,12 @@ var View = React.createClass({displayName: "View",
     return (
       React.createElement("div", null, 
         React.createElement("h1", null, "地理院タイル目録の目録"), 
-        React.createElement("table", {border: "1"}, 
+        React.createElement("table", null, 
         React.createElement("tr", null, React.createElement("th", null, "id"), React.createElement("th", null, "URL")), 
-        React.createElement(Tanzaku, {name: "std"})
+        React.createElement(Tanzaku, {name: "std"}), 
+        React.createElement(Tanzaku, {name: "pale"}), 
+        React.createElement(Tanzaku, {name: "english"}), 
+        React.createElement(Tanzaku, {name: "ort"})
         )
       )
     );
