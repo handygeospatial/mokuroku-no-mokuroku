@@ -1,0 +1,26 @@
+{
+  "name": "mokuroku-no-mokuroku",
+  "version": "0.0.0",
+  "description": "地理院タイル目録の目録",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/handygeospatial/mokuroku-no-mokuroku.git"
+  },
+  "author": "handygeospatial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/handygeospatial/mokuroku-no-mokuroku/issues"
+  },
+  "homepage": "https://github.com/handygeospatial/mokuroku-no-mokuroku",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "gulp": "^3.8.10",
+    "react": "^0.12.2",
+    "reactify": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  }
+}
